@@ -32,7 +32,6 @@
     rgba(255, 255, 255, 0.15),
     rgba(255, 255, 255, 0)
   );
-
   /* my declarations */
   --dev-border: 1px solid var(--bs-dark);
   --coda-easing: 0.8s cubic-bezier(0.25, 1, 0.5, 1);
@@ -40,63 +39,60 @@
   --round-border: 60px;
 }
 
-/* FIX 1: Prevent 100vw horizontal scroll overflow */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html,
-body {
-  max-width: 100vw;
+html {
+  width: 100vw;
   overflow-x: hidden;
 }
 
 body {
   background: var(--bs-light);
   min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .PilcrowRounded-Semibold {
   font-family: "PilcrowRounded-Semibold", sans-serif;
 }
-
 .Hind-Regular {
   font-family: "Hind-Regular", sans-serif;
 }
-
 .Montserrat-Italic {
   font-family: "Montserrat-Italic", sans-serif;
 }
 .Montserrat {
   font-family: "Montserrat", sans-serif;
 }
-
 .Alpino-Regular {
   font-family: "Alpino-Regular", sans-serif;
 }
 
 .navbar {
-  width: 100%;
+  width: 100vw;
   position: fixed;
   z-index: 999;
   background: rgba(245, 245, 245, 1);
+  /* backdrop-filter: saturate(180%) blur(10px); */
 }
 
 .navbar .navbar-brand img {
   height: 50px;
 }
 
-/* FIX 2: Use min-height so content can expand safely */
 #hero {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* background engineering */
+/* backgroung engineering */
 #hero.home {
   background: url(../coda-files/img/home-bg.jpg) center/cover no-repeat;
 }
@@ -112,15 +108,13 @@ body {
     no-repeat;
 }
 
-/* FIX 3: Added padding-top so the fixed navbar doesn't cover the text on small screens */
 #hero .contents {
-  min-height: 100vh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
-  padding: 80px 20px 40px;
+  width: 100vw;
   backdrop-filter: brightness(45%);
 }
 
@@ -128,26 +122,26 @@ body {
   backdrop-filter: saturate(40%) brightness(45%);
 }
 
-/* FIX 4: Fluid typography for the massive H1 so it never breaks the screen */
 #hero h1 {
-  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-size: clamp(3rem, 9vw, 5rem);
   text-align: center;
   color: var(--bs-light);
+  font-family: "PilcrowRounded-Semibold", sans-serif;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
 }
 
-/* FIX 5: Capped the sub-text strictly at 18px maximum */
 #hero p {
-  font-size: clamp(14px, 4vw, 18px);
+  font-size: 1.6rem;
   text-align: center;
   font-family: "Alpino-Regular", sans-serif;
   letter-spacing: 0.1rem;
   color: var(--bs-white);
+  line-height: 1.35;
 }
 
-/* FIX 6: Swapped fixed width for max-width to allow shrinking on small phones */
 #hero .social-media-links {
-  width: 100%;
-  max-width: 350px;
+  width: 350px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -163,16 +157,12 @@ body {
   color: var(--bs-blue);
 }
 
-/* FIX 7: Swapped fixed width for max-width, added gap and flex-wrap for safety */
 #hero .cta-buttons {
   height: auto;
-  width: 100%;
-  max-width: 360px;
+  width: 360px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  flex-wrap: wrap;
   margin: 20px 0 0 0;
 }
 
@@ -184,8 +174,6 @@ body {
   border-radius: var(--round-border);
   transition: all var(--coda-easing);
   font-size: 18px;
-  text-align: center;
-  flex: 1 1 auto;
 }
 
 #hero .cta-buttons a:hover {
@@ -195,7 +183,7 @@ body {
 }
 
 #overview {
-  width: 100%;
+  width: 100vw;
 }
 
 #overview .directive-link {
@@ -291,7 +279,7 @@ footer .container li.nav-item {
   }
 }
 
-/* the ilbloru story styling */
+/* the ibloru story styling */
 #summary {
   height: 50vh;
 }
@@ -344,21 +332,70 @@ span.decription-big-text {
   font-weight: 400;
 }
 
+/* RESPONSIVE IMPROVEMENTS - typography scaling + full 100vw fit + prevent large hero fonts from being cut off above navbar on small screens */
+@media (max-width: 768px) {
+  #hero .social-media-links {
+    width: 280px;
+  }
+  #hero .cta-buttons {
+    width: 300px;
+  }
+  .container {
+    width: 100vw;
+    max-width: 100vw;
+  }
+}
+
 @media (max-width: 678px) {
   #summary .container p {
     font-size: 18px;
   }
   #hero h1.manimizeonsmallscreens {
-    /* Kept your original logic here, but with clamp() above, it should naturally scale down smoothly anyway */
+    font-size: 3rem;
     padding-top: 90px;
+  }
+  #hero .social-media-links {
+    width: 260px;
+  }
+  #hero .cta-buttons {
+    width: 280px;
+  }
+}
+
+@media (max-width: 576px) {
+  #hero .social-media-links {
+    width: 100%;
+    max-width: 220px;
+  }
+  #hero .cta-buttons {
+    width: 100%;
+    max-width: 260px;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  #hero .cta-buttons a {
+    width: 100%;
+    max-width: 220px;
+    font-size: 17px;
+  }
+  .container {
+    width: 100vw;
+    max-width: 100vw;
   }
 }
 
 @media (max-width: 450px) {
   #hero.inner-pages {
-    min-height: 50vh;
+    height: 50vh;
   }
   #summary .container p {
     font-size: 17px;
+  }
+  #hero .social-media-links {
+    max-width: 200px;
+  }
+  #hero .cta-buttons {
+    max-width: 240px;
   }
 }
