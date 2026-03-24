@@ -60,14 +60,23 @@ body {
 }
 
 .Montserrat-Italic {
-  font-family: "Montserrat-Italic", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
 }
 .Montserrat {
   font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.01rem;
 }
 
 .Alpino-Regular {
   font-family: "Alpino", sans-serif;
+}
+
+.gill-sans-2 {
+  font-family: "Gill Sans 2", sans-serif;
+  font-weight: 400;
 }
 
 .navbar {

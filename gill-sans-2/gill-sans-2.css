@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "Gill Sans 2";
+  font-weight: 300;
+  font-style: normal;
+  src: url("Gill Sans Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gill Sans 2";
+  font-weight: 300;
+  font-style: italic;
+  src: url("Gill Sans Light Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gill Sans 2";
+  font-weight: 400;
+  font-style: normal;
+  src: url("Gill Sans.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gill Sans 2";
+  font-weight: 400;
+  font-style: italic;
+  src: url("Gill Sans Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gill Sans 2";
+  font-weight: 500;
+  font-style: normal;
+  src: url("Gill Sans Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gill Sans 2";
+  font-weight: 500;
+  font-style: italic;
+  src: url("Gill Sans Medium Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gill Sans 2";
+  font-weight: 700;
+  font-style: normal;
+  src: url("Gill Sans Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gill Sans 2";
+  font-weight: 700;
+  font-style: italic;
+  src: url("Gill Sans Bold Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gill Sans 2";
+  font-weight: 900;
+  font-style: normal;
+  src: url("Gill Sans Heavy.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gill Sans 2";
+  font-weight: 900;
+  font-style: italic;
+  src: url("Gill Sans Heavy Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gill Sans Condensed";
+  font-weight: 400;
+  font-style: normal;
+  src: url("GillSans Condensed.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gill Sans Condensed";
+  font-weight: 700;
+  font-style: normal;
+  src: url("GillSans Condensed Bold.otf") format("opentype");
+}
