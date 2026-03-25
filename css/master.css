@@ -445,3 +445,32 @@ span.decription-big-text {
     max-width: 240px;
   }
 }
+
+/* Base Button Styling */
+#Toggle-button {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08); /* Very soft border */
+  border-radius: 10px; /* Modern rounded corners */
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03); /* Tiny elevation */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Toggle-icon {
+  color: #2d3436;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+#Toggle-button:not(.collapsed) #Toggle-icon {
+  transform: rotate(90deg);
+  color: var(--bs-red);
+}
+
+#Toggle-button:active {
+  transform: translateY(0);
+}
