@@ -354,6 +354,24 @@ footer .container li.nav-item {
   }
 }
 
+.social-link-footer {
+  margin: 20px 0 0 0;
+  a {
+    font-size: 28px;
+    color: var(--dev-blue);
+    transition: var(--coda-easing);
+  }
+  a:hover {
+    color: var(--bs-blue);
+  }
+}
+
+footer .logo-container {
+  img {
+    height: 80px;
+  }
+}
+
 /* the ibloru story styling */
 #summary {
   height: 50vh;
