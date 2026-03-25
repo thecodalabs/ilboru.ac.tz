@@ -286,6 +286,37 @@ footer .container {
   padding-top: 40px;
 }
 
+footer .container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+  li a {
+    color: var(--bs-red);
+    font-size: 14px;
+    text-decoration: underline;
+  }
+}
+
+footer span {
+  color: var(--bs-secondary);
+  font-size: 16px;
+  padding: 0;
+  color: var(--dev-blue);
+  font-weight: 600;
+}
+
+footer .container p {
+  color: var(--bs-secondary);
+  font-size: 14px;
+  padding: 0;
+  color: var(--dev-blue);
+  a {
+    color: var(--bs-red);
+    text-decoration: underline;
+    transition: all var(--coda-easing);
+  }
+}
+
 footer .container a {
   text-decoration: none;
 }
