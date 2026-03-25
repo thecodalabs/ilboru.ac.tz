@@ -225,7 +225,7 @@ body {
 
 #overview {
   width: 100vw;
-  background: #f5f5f5;
+  /* background: #f5f5f5; */
 }
 
 #overview .directive-link {
@@ -460,6 +460,12 @@ span.decription-big-text {
   justify-content: center;
 }
 
+@media (min-width: 990px) {
+  #Toggle-button {
+    display: none;
+  }
+}
+
 #Toggle-icon {
   color: #2d3436;
   font-size: 1.1rem;
@@ -473,4 +479,14 @@ span.decription-big-text {
 
 #Toggle-button:active {
   transform: translateY(0);
+}
+
+.motto {
+  font-family: "Playwrite IE", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #cccccc;
+  font-size: 1.7rem;
+  margin: 5px 0 40px 0;
 }
