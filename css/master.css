@@ -58,10 +58,16 @@ body {
 }
 
 .PilcrowRounded-Semibold {
-  font-family: "Pilcrow Rounded", sans-serif;
+  font-family: "PilcrowRounded-Variable", sans-serif;
+}
+
+.varela-round-regular {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .Hind-Regular {
-  font-family: "Hind", sans-serif;
+  font-family: "Hind-Regular", sans-serif;
 }
 .Montserrat-Italic {
   font-family: "Montserrat", sans-serif;
@@ -71,7 +77,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 .Alpino-Regular {
-  font-family: "Alpino", sans-serif;
+  font-family: "Alpino-Regular", sans-serif;
 }
 
 .navbar {
@@ -141,7 +147,7 @@ body {
 }
 
 #hero .social-media-links {
-  width: 350px;
+  width: 360px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -150,7 +156,7 @@ body {
 #hero .social-media-links a {
   color: var(--bs-white);
   transition: color var(--coda-easing);
-  font-size: 20px;
+  font-size: 28px;
 }
 
 #hero .social-media-links a:hover {
@@ -159,21 +165,23 @@ body {
 
 #hero .cta-buttons {
   height: auto;
-  width: 360px;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin: 20px 0 0 0;
 }
 
 #hero .cta-buttons a {
   color: var(--bs-white);
   text-decoration: none;
-  padding: 8px 20px;
+  padding: 8px 12px;
   border: 1px solid var(--bs-white);
   border-radius: var(--round-border);
   transition: all var(--coda-easing);
   font-size: 18px;
+  text-align: center;
+  margin: 0 10px;
 }
 
 #hero .cta-buttons a:hover {
@@ -338,7 +346,7 @@ span.decription-big-text {
     width: 280px;
   }
   #hero .cta-buttons {
-    width: 300px;
+    width: 100%;
   }
   .container {
     width: 100vw;
@@ -358,7 +366,7 @@ span.decription-big-text {
     width: 260px;
   }
   #hero .cta-buttons {
-    width: 280px;
+    width: 100%;
   }
 }
 

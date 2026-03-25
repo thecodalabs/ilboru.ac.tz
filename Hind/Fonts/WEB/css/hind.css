@@ -1,0 +1,30 @@
+/**
+* @license
+*
+* Font Family: Hind
+* Designed by: Manushi Parikh
+* URL: https://www.fontshare.com/fonts/hind
+* © 2026 Indian Type Foundry
+*
+* Hind Variable (Variable font)
+
+*
+*/
+/**
+* This is a variable font
+* You can control variable axes as shown below:
+* font-variation-settings: wght 300.0;
+*
+* available axes:
+'wght' (range from 300.0 to 700.0
+*/
+@font-face {
+  font-family: 'Hind-Variable';
+  src: url('../fonts/Hind-Variable.woff2') format('woff2'),
+       url('../fonts/Hind-Variable.woff') format('woff'),
+       url('../fonts/Hind-Variable.ttf') format('truetype');
+  font-weight: 300 700;
+  font-display: swap;
+  font-style: normal;
+}
+
