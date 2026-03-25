@@ -1,3 +1,29 @@
+/* 1. For Chrome, Edge, and Safari (WebKit) */
+::-webkit-scrollbar {
+  width: 6px; /* Ultra-thin width */
+  height: 6px; /* For horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff; /* Pure white background for light theme */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e0e0e0; /* Very subtle light grey thumb */
+  border-radius: 20px; /* Fully rounded capsules */
+  border: 1px solid #ffffff; /* Creates a tiny gap for a "floating" effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cccccc; /* Darkens slightly on hover for feedback */
+}
+
+/* 2. For Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #e0e0e0 #ffffff; /* thumb | track */
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -69,15 +95,20 @@ body {
 .Hind-Regular {
   font-family: "Hind-Regular", sans-serif;
 }
-.Montserrat-Italic {
-  font-family: "Montserrat", sans-serif;
+.Gill-Sans-2-Italic {
+  font-family: "Gill-Sans-2", sans-serif;
   font-style: italic;
 }
-.Montserrat {
-  font-family: "Montserrat", sans-serif;
+.Gill-Sans-2 {
+  font-family: "Gill-Sans-2", sans-serif;
 }
 .Alpino-Regular {
   font-family: "Alpino-Regular", sans-serif;
+}
+
+.Gill-Sans-2 {
+  font-family: "Gill Sans 2", sans-serif;
+  font-weight: 300;
 }
 
 .navbar {
@@ -137,12 +168,14 @@ body {
 }
 
 #hero p {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   text-align: center;
   font-family: "Alpino-Regular", sans-serif;
   letter-spacing: 0.1rem;
+  font-weight: 400;
   color: var(--bs-white);
   line-height: 1.35;
+  color: #cccccc;
 }
 
 #hero .social-media-links {
@@ -156,6 +189,7 @@ body {
   color: var(--bs-white);
   transition: color var(--coda-easing);
   font-size: 28px;
+  color: #cccccc;
 }
 
 #hero .social-media-links a:hover {
@@ -191,6 +225,7 @@ body {
 
 #overview {
   width: 100vw;
+  background: #f5f5f5;
 }
 
 #overview .directive-link {
@@ -242,7 +277,7 @@ body {
 
 @media (min-width: 1200px) {
   .navbar .navbar-brand {
-    margin: 0 25% 0 0;
+    margin-right: 150px;
   }
 }
 
@@ -267,16 +302,18 @@ footer .nav-link:hover {
 
 footer .container .join-us {
   padding: 8px 20px;
-  background: var(--bs-blue);
+  background: transparent;
   border-radius: var(--round-border);
-  color: var(--bs-white);
+  color: var(--bs-blue);
   transition: all var(--coda-easing);
   border: 1px solid var(--bs-blue);
+  margin: 40px 0 0 0;
+  border-radius: 0;
 }
 
 footer .container .join-us:hover {
-  color: var(--bs-blue);
-  background: transparent;
+  color: var(--bs-white);
+  background: var(--bs-blue);
 }
 
 footer .container li.nav-item {
@@ -311,9 +348,10 @@ footer .container li.nav-item {
 }
 
 p.decription-text {
-  font-size: 14px;
+  font-size: 16px;
+  letter-spacing: 0.05rem;
   color: var(--dev-blue);
-  font-weight: 400;
+  font-weight: 300;
   padding: 10px 0 0 0;
 }
 
@@ -326,6 +364,7 @@ span.decription-text {
 a.decription-text {
   text-decoration: none;
   font-size: 14px;
+  letter-spacing: 0.01rem;
   transition: all var(--coda-easing);
 }
 
